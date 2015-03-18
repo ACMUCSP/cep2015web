@@ -1,0 +1,22 @@
+Cep\Entity\Message:
+  type: entity
+  table: message
+  fields:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+    created_time:
+      type: datetime
+      notnull: true
+    name:
+      type: string(50)
+      notnull: true
+    email:
+      type: string(50)
+      notnull: true
+    message:
+      type: string(300)
+      notnull: true
+  lifecycleCallbacks: {  }

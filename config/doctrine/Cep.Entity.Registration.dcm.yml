@@ -1,0 +1,24 @@
+Cep\Entity\Registration:
+  type: entity
+  table: registration
+  fields:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+    created_time:
+      type: datetime
+      notnull: true
+    name:
+      type: string(50)
+      notnull: true
+    dni:
+      type: string(8)
+      notnull: true
+    school_name:
+      type: string(50)
+    email:
+      type: string(50)
+      notnull: true
+  lifecycleCallbacks: {  }

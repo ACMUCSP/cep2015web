@@ -1,0 +1,8 @@
+/vendor/
+composer.lock
+/cache/
+/logs/
+/src/Cep/Entity/
+*.swp
+/web/files/
+composer.phar

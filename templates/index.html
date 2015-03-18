@@ -1,0 +1,209 @@
+{% extends "layout.html" %}
+
+{% block title 'Inicio' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ app.request.basepath }}/css/home.css" type="text/css" media="screen, projection" />
+<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<section id="feature_slider" class="lol">
+  <article class="slide" id="showcasing"
+    style="background: url('{{ app.request.basepath }}/img/img1.jpg') repeat-x top center;">
+    <div class="info">
+      <h2>¿Quieres poner a prueba tu ingenio?</h2>
+    </div>
+  </article>
+  <article class="slide" id="ideas"
+    style="background: url('{{ app.request.basepath }}/img/img2.jpg') repeat-x top center;">
+    <div class="info">
+      <h2>Piensa,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+        <strong>crea,</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+        resuelve...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+    </div>
+  </article>
+  <article class="slide" id="tour"
+    style="background: url('{{ app.request.basepath }}/img/img3.jpg') repeat-x top center;">
+    <div class="info">
+      <h2>¡y gana!</h2>
+      <a class="move" href="#participa">Sé Parte</a>
+    </div>
+  </article>
+  <article class="slide" id="responsive"
+    style="background: url('{{ app.request.basepath }}/img/img3.jpg') repeat-x top center;">
+    <div class="info">
+      <h2>
+        Concurso Escolar de Programación <strong>2014</strong>
+      </h2>                
+      <h3>5 y 6 de Diciembre</h3>
+    </div>
+  </article>        
+</section>
+
+<div id="showcase" class="section">
+  <div class="container">
+    <div class="section_header">
+      <h3>El Concurso</h3>
+    </div>            
+    <div class="row feature_wrapper">
+      <!-- Features Row -->
+      <div class="features_op1_row">
+        <!-- Feature -->
+        <div class="col-sm-4 feature first">
+          <div class="img_box">
+            <img src="{{ app.request.basepath }}/img/brain.jpg">
+          </div>
+          <div class="text">
+            <h6>Integral</h6>
+            <p>
+            Desarrolla tu creatividad y mide tus habilidades de comprensión lectora, matemática, abstracción y, finalmente, programación.
+            </p>
+          </div>
+        </div>
+        <!-- Feature -->
+        <div class="col-sm-4 feature">
+          <div class="img_box">
+            <img src="{{ app.request.basepath }}/img/compite.jpg">
+          </div>
+          <div class="text">
+            <h6>Compite</h6>
+            <p>
+            Inspírate y sé parte del mundo de la programación competitiva. Conoce y aprende con los mejores del Perú y del mundo.
+            </p>
+          </div>
+        </div>
+        <!-- Feature -->
+        <div class="col-sm-4 feature last">
+          <div class="img_box">
+            <img src="{{ app.request.basepath }}/img/code.jpg">
+          </div>
+          <div class="text">
+            <h6>Computación</h6>
+            <p>
+            Es la disciplina que ha permitido la creación de todo el software y grandes sitios web que utilizamos
+            a diario. Experiméntala...
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="nosotros" class="section">
+  <div class="container">
+    <div class="section_header">
+      <h3>Nosotros</h3>
+    </div> 
+    <div class="row feature">
+      <div class="col-sm-4">
+        <img src="{{ app.request.basepath }}/img/acm.png" class="img-responsive" />
+      </div>
+      <div class="col-sm-8 info">
+        <h3>
+          Capítulo Estudiantil ACM UCSP
+        </h3>
+        <p>
+        Somos una organización académica sin ánimo de lucro conformada y dirigida por estudiantes de Ciencia de la Computación.
+        Buscamos promover la computación como disciplina dentro y fuera de nuestra universidad.  Para ello, contamos con el
+        respaldo de la <a href="http://acm.org"><em>Association of Computing Machinery</em></a>, lo que nos permite mantenernos
+        al tanto y difundir el estado del arte en las diferentes ramas de la computación, así como establecer lazos profesionales
+        a nivel nacional e internacional.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="participa" class="section">
+  <div class="container">
+    <div class="section_header">
+      <h3>Participa</h3>
+    </div>
+
+    <div class="row charts_wrapp">
+      <div class="col-sm-6">
+        <p>
+          <strong>La 2da edición del Concurso Escolar de Programación fue un éxito...</strong>
+        </p>
+        <ul id="link-list" class="list-group">
+          <li class="list-group-item btn btn-info">
+            <a href="{{ app.url_generator.generate('results') }}">Ver Resultados</a>
+          </li>
+          <li class="list-group-item btn btn-info">
+            <a href="{{ app.request.basepath }}/files/cep2014.pdf" target="_blank">Descarga los Problemas</a>
+          </li>
+          <li class="list-group-item btn btn-info">
+            <a href="#gallery" id="gallery-link">Ver Galería de Fotos</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-6 pro" id="capimg">
+        <div class="img_box">
+          <img src="{{ app.request.basepath }}/gallery/6.jpg">
+          <img src="{{ app.request.basepath }}/gallery/7.jpg" style="display: none;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="auspician" class="section">
+  <div class="container">
+    <div class="section_header">
+      <h3>Auspician</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-4 client">
+        <div class="img client1">
+          <a href="https://www.facebook.com/careers/">
+            <img src="{{ app.request.basepath }}/img/facebook.png"/>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-4 client">
+        <div class="img client2">
+          <a href="https://www.amigocloud.com">
+            <img src="{{ app.request.basepath }}/img/amigocloud.png"/>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="sponsorinvite" class="row">
+      <a class="move" href="#contacto">Quiero ser auspiciador</a>
+    </div>
+  </div>
+</div>
+
+<div id="gallery" class="modalDialog">
+  <div class="container">
+    <a href="#participa" title="Close" class="close">&times;</a>
+    <div class="fotorama">
+      {% for i in 1..7 %}
+      <img src="{{ app.request.basepath }}/gallery/{{ i }}.jpg">
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% for msg in message %}
+
+<div id="msg" class="modalDialog">
+  <div class="container">
+    <a href="#" title="Close" class="close">&times;</a>
+    <p> {{ msg }} </p>
+  </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}
+
+{% block js %}
+<script src="{{ app.request.basepath }}/js/home.js"></script>
+<script src="{{ app.request.basepath }}/js/index-slider.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.js"></script>
+
+{% endblock %}
