@@ -29,9 +29,9 @@ $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
 $app->register(new DoctrineServiceProvider(), array(
   'db.options' => array(
     'driver' => 'pdo_pgsql',
-    'dbname' => 'cep2014',
-    'user' => 'cep2014',
-    'password' => 'cep2014',
+    'dbname' => 'cep2015',
+    'user' => 'cep2013',
+    'password' => 'cep$$2013@',
     'charset' => 'utf8',
   ),
 ));

@@ -1,0 +1,456 @@
+{% extends "layout.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <link href="{{ app.request.basepath }}/css/index.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block header %}
+    <div class="container">
+
+        <h1><a href="#">Concurso Escolar de Programación 2015</a></h1>
+        <p class="subtitle">Piensa, crea, resuelve y <strong>gana</strong>.</p>
+
+        <div class="when">
+
+            <div class="icon-holder">
+                <i class="fa fa-calendar"></i>
+            </div>
+
+            <div>
+                <p><strong>Cuándo</strong></p>
+                <p><span>16 y 17 de Octubre del 2015</span></p>
+            </div>
+
+        </div>
+
+        <div class="where">
+
+            <div class="icon-holder">
+                <i class="fa fa-map-marker"></i>
+            </div>
+
+            <div>
+                <p><strong>Dónde</strong></p>
+                <p><span>Arequipa</span><br />
+                    <a href="#location" class="scrollable">Universidad Católica San Pablo</a></p>
+            </div>
+
+        </div>
+
+        <div class="register-now">
+            <p>Inicio de inscripciones: 3 de Agosto</p>
+            {#<a href="#registration" class="button">Register Now</a>#}
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block content %}
+    <!-- topics -->
+    <div class="topics">
+        <div class="container">
+
+            <h3><strong>For three days,</strong><br />creative experts making great ideas happen.</h3>
+
+            <p>Nunc commodo tellus diam, sed molestie quam fermentum varius. Etiam finibus lorem vel interdum volutpat. Suspendisse potenti. Duis non sem nisi. Phasellus iaculis placerat neque id fringilla. Sed suscipit erat egestas ante sollicitudin, quis tristique leo tristique.</p>
+
+            <div>
+                <i class="fa fa-lightbulb-o fa-2x"></i>
+                <h4>Competencia Integral</h4>
+                <p>Desarrolla tu creatividad y mide tus habilidades de comprensión lectora, matemática, abstracción y, programación.</p>
+            </div>
+
+            <div>
+                <i class="fa fa-line-chart fa-2x"></i>
+                <h4>Camino al Éxito</h4>
+                <p>Inspírate y sé un programador competitivo. Conoce y aprende con los mejores del Perú y del mundo.</p>
+            </div>
+
+            <div>
+                <i class="fa fa-code fa-2x"></i>
+                <h4>Ciencia de la Computación</h4>
+                <p>Es la disciplina que ha permitido la creación de todo el software y grandes sitios web que utilizamos a diario. Experiméntala...</p>
+            </div>
+
+        </div>
+    </div>
+    <!-- topics ends! -->
+
+    <a id="speakers" class="anchor"></a>
+
+    <!-- speakers -->
+    <div class="speakers">
+        <div class="container">
+
+            <h2>Nosotros</h2>
+
+            <!-- featured -->
+            <div class="featured">
+
+                <div class="image">
+                    <img src="{{ app.request.basepath }}/img/acm.jpg" alt="" />
+                </div>
+
+                <div>
+                    <h3>Capítulo Estudiantil ACM UCSP</h3>
+
+                    <p>
+                        Somos una organización académica sin ánimo de lucro conformada y dirigida por estudiantes de
+                        Ciencia de la Computación. Buscamos promover la computación como disciplina dentro y fuera de
+                        nuestra universidad.</p>
+                    <p> Contamos con el respaldo de la <a href="http://acm.org">Association of Computing Machinery</a>
+                        lo que nos permite mantenernos al tanto y difundir el estado del arte en las diferentes ramas
+                        de la computación, así como establecer lazos profesionales a nivel nacional e internacional.
+                    </p>
+                </div>
+
+            </div>
+            <!-- featured ends! -->
+
+        </div>
+    </div>
+    <!-- speakers ends! -->
+
+
+    <a id="schedule" class="anchor"></a>
+
+    {# This is pending
+    <!-- schedule -->
+    <div class="schedule">
+        <div class="container">
+
+            <h2>Calendario del Evento</h2>
+            <p class="subtitle">packed with high quality content, just for you.</p>
+
+            <div class="tabs">
+
+                <ul>
+                    <li><a href="#tabs-1">Día 1, 16</a></li>
+                    <li><a href="#tabs-2">Día 2, 17</a></li>
+                </ul>
+
+                <!-- day -->
+                <div id="tabs-1" class="day">
+
+                    <!-- single event -->
+                    <div class="event">
+
+                        <!-- event time -->
+                        <div class="event-time">08:30 <span></span></div>
+                        <!-- event time ends! -->
+
+                        <!-- event details -->
+                        <div class="event-info">
+
+                            <div>
+                                <h4>Registration</h4>
+                            </div>
+
+                        </div>
+                        <!-- event details ends! -->
+
+                    </div>
+                    <!-- single event ends! -->
+
+                    <!-- single event -->
+                    <div class="event extend">
+
+                        <!-- event time -->
+                        <div class="event-time">08:45 - 09:15 <span><i class="fa fa-angle-up"></i></span></div>
+                        <!-- event time ends! -->
+
+                        <!-- event details -->
+                        <div class="event-info">
+
+                            <div>
+                                <h4><a href="#">The Future of the Web: and how to prepare for it now</a></h4>
+                                <p class="speaker"><strong>Samantha Jonson</strong><br/>Founder of Creative Agency</p>
+
+                                <p><img src="images/small_member_placeholder.jpg" alt="" /> Nunc commodo tellus diam, sed molestie quam fermentum varius. Etiam finibus lorem vel interdum volutpat. Suspendisse potenti. Duis non sem nisi. Phasellus iaculis placerat neque id fringilla. Nunc commodo tellus diam, sed molestie quam fermentum varius. Etiam finibus lorem vel interdum volutpat. Suspendisse potenti. Duis non sem nisi. Phasellus iaculis placerat neque id fringilla.</p>
+
+                                <p>Suspendisse potenti. Duis non sem nisi. Phasellus iaculis placerat neque id fringilla. Nunc commodo tellus diam, sed molestie quam fermentum varius. Etiam finibus lorem vel interdum volutpat. Suspendisse potenti. Duis non sem nisi. Phasellus iaculis placerat neque id fringilla.</p>
+                            </div>
+
+                        </div>
+                        <!-- event details ends! -->
+
+                    </div>
+                    <!-- single event ends! -->
+
+                </div>
+                <!-- day ends! -->
+
+                <!-- day -->
+                <div id="tabs-2" class="day">
+
+                    <!-- single event -->
+                    <div class="event">
+
+                        <!-- event time -->
+                        <div class="event-time">08:30 <span></span></div>
+                        <!-- event time ends! -->
+
+                        <!-- event details -->
+                        <div class="event-info">
+
+                            <div>
+                                <h4>Registration</h4>
+                            </div>
+
+                        </div>
+                        <!-- event details ends! -->
+
+                    </div>
+                    <!-- single event ends! -->
+
+                    <!-- single event -->
+                    <div class="event extend">
+
+                        <!-- event time -->
+                        <div class="event-time">08:45 - 09:15 <span><i class="fa fa-angle-up"></i></span></div>
+                        <!-- event time ends! -->
+
+                        <!-- event details -->
+                        <div class="event-info">
+
+                            <div>
+                                <h4><a href="#">The Future of the Web: and how to prepare for it now</a></h4>
+                                <p class="speaker"><strong>Samantha Jonson</strong><br/>Founder of Creative Agency</p>
+
+                                <p><img src="images/small_member_placeholder.jpg" alt="" /> Nunc commodo tellus diam, sed molestie quam fermentum varius. Etiam finibus lorem vel interdum volutpat. Suspendisse potenti. Duis non sem nisi. Phasellus iaculis placerat neque id fringilla. Nunc commodo tellus diam, sed molestie quam fermentum varius. Etiam finibus lorem vel interdum volutpat. Suspendisse potenti. Duis non sem nisi. Phasellus iaculis placerat neque id fringilla.</p>
+
+                                <p>Suspendisse potenti. Duis non sem nisi. Phasellus iaculis placerat neque id fringilla. Nunc commodo tellus diam, sed molestie quam fermentum varius. Etiam finibus lorem vel interdum volutpat. Suspendisse potenti. Duis non sem nisi. Phasellus iaculis placerat neque id fringilla.</p>
+                            </div>
+
+                        </div>
+                        <!-- event details ends! -->
+
+                    </div>
+                    <!-- single event ends! -->
+
+                </div>
+                <!-- day ends! -->
+
+            </div>
+
+        </div>
+    </div>
+    <!-- schedule ends! -->
+    #}
+
+    <!-- why -->
+    <div class="why">
+        <div class="container">
+
+            <div class="testimonials">
+
+                <h4>Testimonios</h4>
+
+                <div class="slides">
+
+                    <blockquote>
+                        Gracias al CEP pude aprender una pequeña parte del mundo de la programación. Quede perplejo,
+                        cuando mi entrenador comenzó a enseñarme, siendo este razonamiento muy diferente a todo lo
+                        había visto. El concurso me motivó a seguir desarrollándome y mejorar poco a poco. Ahora está
+                        entre mis opciones estudiar ciencia de la computación.
+                        <cite>Renato Chavez<br /><span>Competidor CEP 2014, Colegio Alexander Fleming</span></cite>
+                    </blockquote>
+
+                    <blockquote>Quisque gravida libero sodales augue luctus elementum. In tristique faucibus diam, sit amet ultrices erat porttitor ut. Phasellus sit amet lorem sit amet orci lobortis mattis. Nulla venenatis, quam vitae pellentesque sollicitudin, erat enim varius nisl, sed porta augue mi et dui.
+                        <cite>Jennifer Jonson<br /><span>Frontend Developer</span></cite>
+                    </blockquote>
+
+                </div>
+
+            </div>
+
+            <div class="bullets">
+
+                <h3>¿Por qué esta competencia es para ti?</h3>
+
+                <div>
+                    <h4><i class="fa fa-check"></i> Stay Ahead of the curve</h4>
+                    <p>Quisque gravida libero sodales augue luctus elementum. In tristique faucibus diam, sit amet ultrices erat porttitor ut. Phasellus sit amet lorem sit amet orci lobortis mattis. Nulla venenatis, quam vitae pellentesque sollicitudin, erat enim varius nisl, sed porta augue mi et dui.</p>
+                </div>
+
+                <div>
+                    <h4><i class="fa fa-check"></i> Find new ways of thinking and problem-solving</h4>
+                    <p>Quisque gravida libero sodales augue luctus elementum. In tristique faucibus diam, sit amet ultrices erat porttitor ut.</p>
+                </div>
+
+                <div>
+                    <h4><i class="fa fa-check"></i> Networking opportunities</h4>
+                    <p>Quisque gravida libero sodales augue luctus elementum. In tristique faucibus diam, sit amet ultrices erat porttitor ut. Phasellus sit amet lorem sit amet orci lobortis mattis. Nulla venenatis, quam vitae pellentesque sollicitudin, erat enim varius nisl, sed porta augue mi et dui.</p>
+                </div>
+
+                <div>
+                    <h4><i class="fa fa-check"></i> Strengthen Your Skills</h4>
+                    <p>Quisque gravida libero sodales augue luctus elementum. In tristique faucibus diam, sit amet ultrices erat porttitor ut. Phasellus sit amet lorem sit amet orci lobortis mattis. Nulla venenatis, quam vitae pellentesque sollicitudin, erat enim varius nisl, sed porta augue mi et dui.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- why ends! -->
+
+    <a id="registration" class="anchor"></a>
+
+    <!-- registration -->
+    <div class="registration">
+        <div class="container">
+
+            <h2>Registro</h2>
+            <p class="subtitle">¿Estás listo para demostrar tus habilidades?</p>
+
+            <p class="desc">Las inscripciones se abrirán el 3 de Agosto.
+                <a href="#social" class="scrollable">¡Mantente conectado!</a></p>
+
+            <h3>Completa tu información</h3>
+
+            <div class="form">
+
+                <form action="{{ url('registration') }}" method="post">
+                    {# inputs are temporarily disabled #}
+                    {{ form_widget(form1.name, { 'attr': {'disabled': 'true'}}) }}
+                    {{ form_widget(form1.email, { 'attr': {'disabled': 'true'}}) }}
+                    {{ form_widget(form1.dni, { 'attr': {'disabled': 'true'}}) }}
+                    {{ form_widget(form1.school_name, { 'attr': {'disabled': 'true'}}) }}
+                    {{ form_widget(form1._token) }}
+
+                    <button name="submit" type="submit" disabled="true">Enviar</button>
+
+                </form>
+
+            </div>
+
+            <div class="price">
+
+                <div>
+                    <p class="amount"><i class="fa fa-trophy"></i></p>
+                    <h4>Compite y gana</h4>
+                    <p>El CEP es un gran desafío. Por ello, reconoceremos el esfuerzo de nuestros competidores
+                        con fabulosos premios.</p>
+                </div>
+                <div>
+                    <p class="amount"><i class="fa fa-plus-circle"></i></p>
+                    <h4>CEP + CLEI 2015</h4>
+                    <p>La <a href="https://sites.google.com/a/spc.org.pe/clei2015/">XLI Conferencia Latinoamericana en
+                            Informática</a> (CLEI 2015) será realizado en Arequipa del 19-23 de Octubre. Tendrás acceso
+                        libre como competidor CEP.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- registration ends! -->
+
+    <a id="sponsors" class="anchor"></a>
+
+    <!-- sponsors -->
+    <div class="sponsors">
+        <div class="container">
+
+            <h2>Auspiciadores y Asociados</h2>
+            <p class="subtitle">¿Interesado en auspiciar el <strong>CEP</strong>?
+                <a href="#" class="open-contact-form">Contáctanos</a></p>
+
+            <div class="slides">
+                <ul>
+                    <li><a href="https://sites.google.com/a/spc.org.pe/clei2015/">
+                            <img src="{{ app.request.basepath }}/img/clei.jpg" /></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!-- sponsors ends! -->
+
+    <a id="location" class="anchor"></a>
+
+    <!-- location -->
+    <div class="location">
+        <div class="container">
+
+            <h2>Ubicación</h2>
+
+            <!-- info -->
+            <div class="info">
+
+                <div class="maps">
+
+                    <div class="images">
+                        <img src="{{ app.request.basepath }}/img/ucsp.jpg" />
+                    </div>
+
+                    <div id="map_canvas"></div>
+
+                </div>
+
+                <div class="address">
+
+                    <h4>Ven a Arequipa, el nuevo polo tecnológico del Perú</h4>
+
+                    <h5><i class="fa fa-chevron-right"></i> Lugar</h5>
+
+                    <div class="venue">
+                        <p><span>Universidad Católica San Pablo</span></p>
+                        <p>Campus Campiña Paisajista s/n Quinta Vivanco</p>
+                        <p>Barrio de San Lázaro, Arequipa</p>
+                    </div>
+
+                    <h5><i class="fa fa-chevron-right"></i> Detalles Adicionales</h5>
+                    <p>
+                        Arequipa, en quechua Ari-quepay (si quedaos), posee una amplia gama de atractivos turísticos,
+                        desde sus monumentos arquitectónicos como templos, monasterios, y casonas levantadas con la
+                        piedra sillar. Por su parte el paisaje Arequipeño tiene una extraordinaria belleza que cautiva
+                        y atrae a propios y extraños. A la belleza de sus campiñas se suma la belleza de sus montañas
+                        volcánicas (Misti, Chachani, Pichupichu), formando parte de la Cordillera Volcánica. Entre sus
+                        principales atractivos destacan la catedral de Arequipa, el templo y convento de la compañía de
+                        Jesús, Monasterio de Santa Catalina (“una pequeña ciudad dentro de una ciudad”), antiguas
+                        casonas como, la casona de la Moral y la casa Goyeneche, y los impresionantes cañones del Colca
+                        y de Cotahuasi.
+                    </p>
+
+                    <p>
+                        Justamente por la forma de construcción - de sus edificios y monumentos - con sillar (piedra de
+                        lava volcánica), arequipa es conocida como la "Ciudad Blanca".
+                        Fue fundada el 15 de agosto de 1540, y reconocida por UNESCO como patrimonio cultural de la
+                        humanidad en el año 2000.
+                    </p>
+
+                </div>
+
+            </div>
+            <!-- info ends! -->
+
+        </div>
+    </div>
+    <!-- location ends! -->
+
+    <!-- social -->
+    <a id="social" class="anchor"></a>
+    <div class="social">
+        <div class="container">
+
+            <div>
+                <h2>Mantente Conectado</h2>
+                <p class="subtitle">Conéctate con nosotros a través de las redes sociales</p>
+
+                <a href="http://fb.com/ACMUCSP"><i class="fa fa-facebook"></i></a>
+                <a href="http://twitter.com/ACMUCSP"><i class="fa fa-twitter"></i></a>
+                <a href="mailto:acm@ucsp.edu.pe"><i class="fa fa-envelope-o"></i></a>
+            </div>
+
+        </div>
+    </div>
+    <!-- social ends! -->
+
+{% endblock %}
+
+{% block js %}
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script src="{{ app.request.basepath }}/js/index.js"></script>
+{% endblock %}

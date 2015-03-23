@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title '' %}Concurso Escolar de Programación 2015</title>
+    <meta name="keywords" content="computación, educación, concurso, programación, ciencia" />
+    <meta name="description" content="{% block description '' %}" />
+
+    {% block css %} {% endblock %}
+    <link href="{{ app.request.basepath }}/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ app.request.basepath }}/css/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ app.request.basepath }}/css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- header -->
+    <header class="header">
+        <div class="menu">
+            <ul>
+                <li><a href="{{ url('homepage') }}#top">Inicio</a></li>
+                <li><a href="{{ url('homepage') }}#speakers">Nosotros</a></li>
+                {#<li><a href="{{ url('homepage') }}#schedule">Calendario</a></li>#}
+                <li><a href="{{ url('homepage') }}#registration">Registro</a></li>
+                <li><a href="{{ url('homepage') }}#sponsors">Auspicio</a></li>
+                <li><a href="{{ url('homepage') }}#location">Ubicación</a></li>
+                <li><a href="{{ url('practice') }}">Práctica</a></li>
+                <li><a href="#contact" class="open-contact-form">Contacto</a></li>
+            </ul>
+
+        </div>
+        {% block header %}
+        {% endblock %}
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+
+            <p>© 2015 <a href="http://fb.com/ACMUCSP">Capítulo Estudiantil ACM UCSP</a></p>
+
+        </div>
+    </footer>
+    <!-- footer ends! -->
+</div>
+
+<!-- back to top -->
+<div class="back">
+    <div class="container">
+        <a href="#top"><i class="fa fa-angle-up fa-3x"></i></a>
+    </div>
+</div>
+<!-- back to top ends! -->
+
+<!-- contact form overlay popup -->
+<div class="overlay" style="display: none;">
+
+    <div class="contact-form">
+        <h3>Contáctanos</h3>
+
+        <!-- contact form -->
+        <div class="form">
+            <form action="{{ url('contact') }}" method="post">
+                {{ form_widget(form2.name) }}
+                {{ form_widget(form2.email) }}
+                {{ form_widget(form2.message) }}
+                {{ form_widget(form2._token) }}
+                <button name="submit" type="submit">Enviar mensaje</button>
+            </form>
+        </div>
+        <!-- contact form ends! -->
+
+        <!-- Do Not Remove! -->
+        <p class="error"></p>
+        <p class="message"></p>
+        <!-- Do Not Remove! Ends! -->
+        <a href="#" class="close-contact-form"><i class="fa fa-times fa-lg"></i></a>
+    </div>
+</div>
+<!-- contact form overlay popup ends! -->
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src="{{ app.request.basepath }}/js/jquery.flexslider-min.js"></script>
+<script src="{{ app.request.basepath }}/js/jquery.parallax-1.1.3.js"></script>
+<script src="{{ app.request.basepath }}/js/jquery.inview.min.js"></script>
+<script src="{{ app.request.basepath }}/js/form.js"></script>
+<script src="{{ app.request.basepath }}/js/theme.js"></script>
+{% block js %} {% endblock %}
+</body>
+</html>

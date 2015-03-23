@@ -1,46 +1,46 @@
-#editor { 
-  font-family: monospace;
-  font-size: 14px;
+#editor {
+    font-family: monospace;
+    font-size: 14px;
 }
 
 #editor-toolbar button {
-  padding: 5px 15px 5px 15px;
+    padding: 5px 15px 5px 15px;
 }
 
 #ed-wrapper {
-  width: 100%;
-  float: left;
+    width: 100%;
+    float: left;
 }
 #box-wrapper {
-  width: 100%;
-  float: right;
+    float: right;
+    width: 100%;
 }
 
 #comp_msg {
-  display: none;
+    display: none;
 }
 
 textarea {
-  max-width: 100%;
-  width: 100%;
-  height: 160px;
-  font-family: monospace;
-  font-size: 13px;
+    max-width: 100%;
+    width: 100%;
+    height: 160px;
+    font-family: monospace;
+    font-size: 13px;
 }
 
 .text-error {
-  color: #b94a48
+    color: #b94a48
 }
 
 .loader {
-  width: 18px;
-  display: none;
+    width: 18px;
+    display: none;
 }
 
 #drive-bar {
-  display: none;
+    display: none;
 }
 
 .wide {
-  width: 100%;
+    width: 100%;
 }

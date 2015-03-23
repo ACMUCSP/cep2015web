@@ -1,0 +1,97 @@
+{% extends "layout.twig" %}
+
+{% block title 'Práctica | ' %}
+
+{% block css %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ app.request.basepath }}/css/practice.css" type="text/css" media="screen, projection" />
+{% endblock %}
+
+{% block content %}
+
+    <div class="section">
+        <div class="container" id="ed-cont">
+            <h2>CEP++</h2>
+            <p>
+                Construye el mundo en este simple editor y compilador C++. Puedes
+                practicar donde te encuentres.
+            </p>
+            <div class="row">
+                <div id="ed-wrapper">
+                    <div class="btn-toolbar" id="editor-toolbar">
+                        <div class="btn-group">
+                            <div style='height: 0px;width:0px; overflow:hidden;'><input id="upfile" type="file" value="upload"
+                                                                                        accept="text/*, .cpp, .c, .cc"/></div>
+                            <button type="button" class="btn btn-default" id="newbtn">
+                                <span class="glyphicon glyphicon-plus"></span> Nuevo
+                            </button>
+                            <button type="button" class="btn btn-default" id="openbtn">
+                                <span class="glyphicon glyphicon-open"></span> Abrir
+                            </button>
+                            <button type="button" class="btn btn-default" id="savebtn">
+                                <span class="glyphicon glyphicon-floppy-save"></span> Guardar
+                            </button>
+                            <button type="button" class="btn btn-default" id="fullbtn">
+                                <span class="glyphicon glyphicon-fullscreen"></span>
+                            </button>
+                        </div>
+                        <div class="btn-group" id="act-drive">
+                            <button type="button" class="btn btn-default"> Google Drive </button>
+                        </div>
+                        <div class="btn-group" id="drive-bar">
+                            <button type="button" class="btn btn-default" disabled> Drive
+                                <img src="{{ app.request.basepath }}/img/ajax-loader.gif" id="driveloader" class="loader">
+                            </button>
+                            <button type="button" class="btn btn-default" id="opendrivebtn">
+                                <span class="glyphicon glyphicon-cloud-download"></span>
+                            </button>
+                            <button type="button" class="btn btn-default" id="savedrivebtn">
+                                <span class="glyphicon glyphicon-cloud-upload"></span>
+                            </button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-success" id="runbtn">
+                                <span class="glyphicon glyphicon-expand"></span> Ejecutar
+                                <img src="{{ app.request.basepath }}/img/ajax-loader.gif" id="loader" class="loader">
+                            </button>
+                        </div>
+                    </div>
+                    <div id="editor">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hola Mundo" &lt;&lt; endl;
+    return 0;
+}</div>
+                </div>
+
+                <div id="box-wrapper" class="col-xs-12">
+                    <div id="comp_msg" class="text-error">
+                        <h4>Mensajes del Compilador</h4>
+                        <textarea id="comp_msg_ta" class="text-error" readonly></textarea>
+                    </div>
+
+                    <h3>Entrada</h3>
+                    <textarea id="input_ta"></textarea>
+
+                    <h3>Salida</h3>
+                    <textarea id="output_ta" readonly></textarea>
+                    <span id="stats"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block js %}
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="{{ app.request.basepath }}/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ app.request.basepath }}/js/practice.js" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ app.request.basepath }}/js/gdrive.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
+    <script type="text/javascript" src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+{% endblock %}
+
