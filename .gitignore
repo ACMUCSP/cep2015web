@@ -6,3 +6,4 @@ composer.lock
 *.swp
 /web/files/
 composer.phar
+.idea
