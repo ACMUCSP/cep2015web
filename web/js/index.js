@@ -1,13 +1,6 @@
 $(document).ready(function() {
     "use strict";
 
-    // Single Speakers
-    $('.single').hover(function() {
-
-        $(this).find('div').slideToggle(150);
-
-    });
-
     // Tabs
     $('.tabs').tabs();
 
@@ -19,17 +12,6 @@ $(document).ready(function() {
         var location = url.substring(url.indexOf('#'));
         $('html, body').animate({ scrollTop: $(location).offset().top }, 2000);
         event.preventDefault();
-    });
-
-    // Program Price select
-    var $pricebox = $('.price div');
-
-    $pricebox.click(function(event) {
-        $pricebox.removeClass('active');
-        $(this).addClass('active');
-
-        $('.registration input[name="program"]').val($(this).find('h4').text() + ' ' + $(this).find('.amount').text());
-
     });
 
     // Register Scroll
@@ -69,7 +51,7 @@ $(document).ready(function() {
         selector: '.slides blockquote',
         controlNav: false,
         directionNav: true,
-        slideshowSpeed: 3600,
+        slideshowSpeed: 12000,
         animationSpeed: 1200,
         prevText: '<i class="fa fa-chevron-left"></i>',
         nextText: '<i class="fa fa-chevron-right"></i>'
@@ -89,7 +71,7 @@ $(document).ready(function() {
 
     // InView
     var $fadeInDown = $('.menu, .header h1, .header .subtitle, .topics h3, .topics div i, .speakers .single h3');
-    var $fadeInLeft = $('.when, .where, .speakers h2, .speakers .featured h3, .schedule h2, .bullets h3, .registration h2, .registration .form, .sponsors h2, .location h2, .maps .images, .maps #map_canvas, .social h2');
+    var $fadeInLeft = $('.when, .where, .speakers h2, .speakers .featured h3, .schedule h2, .bullets h3, .registration h2, .sponsors h2, .location h2, .maps .images, .maps #map_canvas, .social h2');
     var $fadeInRight = $('.register-now, .speakers .subtitle, .schedule .subtitle, .registration .subtitle, .registration .price, .sponsors .subtitle, .location .subtitle, .location .address, .social .subtitle');
 
     $fadeInDown.css('opacity', 0);
@@ -110,6 +92,11 @@ $(document).ready(function() {
     $fadeInRight.one('inview', function(event, visible) {
         if (visible) { $(this).addClass('animated fadeInRight'); }
     });
+
+    // Disabling form
+    $('.registration .form form input, .registration .form form button').attr('disabled', 'true');
+    $('.registration .form form button').css('cursor', 'default');
+    $('.registration .form').css('opacity', 0.8).css('filter', 'blur(1px)').css('-webkit-filter', 'blur(1px)');
 
     // Map
 

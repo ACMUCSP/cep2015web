@@ -252,15 +252,28 @@
                 <div class="slides">
 
                     <blockquote>
+                        Empecé el curso de programación sin saber mucho acerca de esto y, aunque lo que me enseñaron
+                        los entrenadores fue básico —siendo la programación un proceso complejo—, pude ser capaz de
+                        crear programas que realizan lo que yo quiera. Y esto me encanta, ya que constantemente
+                        estoy pensando cómo codificar mis ideas, que en algunas ocasiones no es tan sencillo.
+                        <cite>Karl Loayza<br />
+                            <span>1er lugar CEP 2014, Colegio San Juan Bautista de la Salle</span></cite>
+                    </blockquote>
+
+                    <blockquote>
                         Gracias al CEP pude aprender una pequeña parte del mundo de la programación. Quedé perplejo
-                        cuando mi entrenador comenzó a enseñarme, siendo este razonamiento muy diferente a lo habitual.
-                        El concurso me motivó a seguir desarrollándome y mejorar poco a poco. Ahora está
-                        entre mis opciones estudiar ciencia de la computación.
+                        cuando mi entrenador comenzó a instruirme, siendo este razonamiento muy diferente a lo habitual.
+                        El concurso me motivó a seguir desarrollándome y mejorar poco a poco. Ahora está entre mis
+                        opciones estudiar Ciencia de la Computación.
                         <cite>Renato Chavez<br /><span>2do lugar CEP 2014, Colegio Alexander Fleming</span></cite>
                     </blockquote>
 
-                    <blockquote>Quisque gravida libero sodales augue luctus elementum. In tristique faucibus diam, sit amet ultrices erat porttitor ut. Phasellus sit amet lorem sit amet orci lobortis mattis. Nulla venenatis, quam vitae pellentesque sollicitudin, erat enim varius nisl, sed porta augue mi et dui.
-                        <cite>Jennifer Jonson<br /><span>Frontend Developer</span></cite>
+                    <blockquote>
+                        Fue muy satisfactorio poder compartir conocimientos que me apasionan con muchachos en edad
+                        escolar. Al mismo tiempo noté en su entusiasmo que nuestra iniciativa era bien recibida.
+                        Considero que con el CEP podemos detectar una vocación desde temprano y cultivarla mucho antes
+                        de que empiecen la universidad.
+                        <cite>Marco Flores<br /><span>Entrenador CEP 2014, Universidad Católica San Pablo</span></cite>
                     </blockquote>
 
                 </div>
@@ -279,13 +292,13 @@
 
                 <div>
                     <h4><i class="fa fa-check">Revoluciona tu razonamiento</i></h4>
-                    <p>Te adentrarás en el interesante mundo de la resolución de problemas junto a los fundamentos
+                    <p>Estarás inmerso en el interesante mundo de la resolución de problemas junto a los fundamentos
                         y técnicas para resolverlos.</p>
                 </div>
 
                 <div>
                     <h4><i class="fa fa-check">Espíritu competitivo</i></h4>
-                    <p>En esta competencia enfrentarás a muchos otros participantes del país. Aprende aún más =
+                    <p>En esta competencia enfrentarás a muchos otros participantes del país. Aprende aún más
                         compartiendo tu experiencia.</p>
                 </div>
 
@@ -319,10 +332,10 @@
 
                 <form action="{{ url('registration') }}" method="post">
                     {# inputs are temporarily disabled #}
-                    {{ form_widget(form1.name, { 'attr': {'disabled': 'true'}}) }}
-                    {{ form_widget(form1.email, { 'attr': {'disabled': 'true'}}) }}
-                    {{ form_widget(form1.dni, { 'attr': {'disabled': 'true'}}) }}
-                    {{ form_widget(form1.school_name, { 'attr': {'disabled': 'true'}}) }}
+                    {{ form_widget(form1.name) }}
+                    {{ form_widget(form1.email) }}
+                    {{ form_widget(form1.dni) }}
+                    {{ form_widget(form1.school_name) }}
                     {{ form_widget(form1._token) }}
 
                     <button name="submit" type="submit" disabled="true">Enviar</button>

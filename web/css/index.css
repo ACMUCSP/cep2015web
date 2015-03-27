@@ -481,7 +481,6 @@
     border: 3px solid #f0f0f0;
     position: relative;
     height: 160px;
-    cursor: pointer;
     margin-bottom: 10px;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -491,7 +490,7 @@
     .price div {
         height: auto;
         padding: 10px; } }
-.price div.active, .price div:hover {
+.price div:hover {
     border: 3px solid #10a1d6; }
 .price div:last-child {
     margin-bottom: 0; }
@@ -653,9 +652,7 @@
     margin-top: -560px;
     padding-top: 500px;
     position: relative;
-    z-index: 5;
-    -webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 40%, 0% 0%);
-    clip-path: polygon(0% 100%, 100% 100%, 100% 40%, 0% 0%); }
+    z-index: 5; }
 .social .container {
     max-width: 100%;
     padding-top: 114px;
