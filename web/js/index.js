@@ -117,9 +117,8 @@ $(document).ready(function() {
     var map = L.map('map_canvas').setView(coord, 15);
 
     L.tileLayer(
-        'https://api.tiles.mapbox.com/v4/mapbox.comic/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q&update=i7l1q'
+        'https://a.tiles.mapbox.com/v4/alculquicondor.lij5ejnh/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYWxjdWxxdWljb25kb3IiLCJhIjoiZDMxZ2JZYyJ9.9Pfq-4MgKnWSSOoj-kDxsg'
     ).addTo(map);
 
     L.marker(coord).addTo(map);
-
 });
