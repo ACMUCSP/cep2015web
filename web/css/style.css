@@ -150,7 +150,17 @@ a:hover {
     position: relative;
     min-height: 665px; }
 .header .menu {
+    z-index: 999;
+}
+.header .menu, .header .menu .dropdown-menu {
     background: rgba(16, 161, 214, 0.8); }
+.header .menu .dropdown ul {
+    padding: 5px 0px;
+    min-width: 120px;
+}
+.header .menu .dropdown-menu a:focus, .header .menu .dropdown-menu a:hover {
+    background: inherit;
+}
 .header ul {
     list-style-type: none;
     padding: 15px 60px;

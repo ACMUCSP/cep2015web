@@ -5,7 +5,7 @@ $(document).ready(function() {
     $('.tabs').tabs();
 
     // Menu Scroll
-    $('.menu a, .scrollable').click(function(event) {
+    $('.scrollable').click(function(event) {
         $('.menu a').removeClass('active');
         $(this).addClass('active');
         var url = $(this).attr('href');
