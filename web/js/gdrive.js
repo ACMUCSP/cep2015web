@@ -1,5 +1,5 @@
 var developerKey = 'AIzaSyDLtjWB1-AThlKjLoHoopx0EebqMjlvSVw';
-var clientId = '947605210532-2umnnsacqnffkqelcda3vakirvsbe2ar.apps.googleusercontent.com';
+var clientId = '947605210532-5m7jn6k51cvsdl39le5oj9q7bm8n5h4j.apps.googleusercontent.com';
 var scope = ['https://www.googleapis.com/auth/drive.file'];
 var pickerApiLoaded = false;
 var oauthToken;
