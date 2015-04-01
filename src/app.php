@@ -20,20 +20,15 @@ $app->register(new TwigServiceProvider(), array(
     'twig.path'    => array(__DIR__.'/../templates'),
     'twig.options' => array('cache' => __DIR__.'/../cache/twig'),
 ));
+$app->register(new DerAlex\Silex\YamlConfigServiceProvider(__DIR__ . '/../config/settings.yml'));
+
 $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
     // add custom globals, filters, tags, ...
-
     return $twig;
 }));
 
 $app->register(new DoctrineServiceProvider(), array(
-  'db.options' => array(
-    'driver' => 'pdo_pgsql',
-    'dbname' => 'cep2015',
-    'user' => 'cep2013',
-    'password' => 'cep$$2013@',
-    'charset' => 'utf8',
-  ),
+  'db.options' => $app['config']['database']
 ));
 $app->register(new DoctrineOrmServiceProvider, array(
   "orm.em.options" => array(

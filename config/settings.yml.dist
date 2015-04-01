@@ -1,0 +1,7 @@
+database:
+  driver: pdo_pgsql
+  host: localhost
+  dbname: cep2015
+  user: cep2015
+  password: cep2015
+  charset: utf8

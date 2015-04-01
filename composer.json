@@ -21,7 +21,8 @@
         "symfony/validator": "~2.2",
         "symfony/yaml": "~2.2",
         "doctrine/dbal": "~2.2",
-        "dflydev/doctrine-orm-service-provider" : "*"
+        "dflydev/doctrine-orm-service-provider" : "*",
+        "deralex/yaml-config-service-provider": "1.0.x-dev"
     },
     "autoload": {
         "psr-0": { "": "src/" }
