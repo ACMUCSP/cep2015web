@@ -57,7 +57,6 @@ $(document).ready(function() {
         nextText: '<i class="fa fa-chevron-right"></i>'
     });
 
-    /*
     $('.sponsors .container .slides').flexslider({
         animation: 'slide',
         selector: 'ul li',
@@ -67,7 +66,6 @@ $(document).ready(function() {
         prevText: '<i class="fa fa-chevron-left"></i>',
         nextText: '<i class="fa fa-chevron-right"></i>'
     });
-    */
 
     // InView
     var $fadeInDown = $('.menu, .header h1, .header .subtitle, .topics h3, .topics div i, .speakers .single h3');
