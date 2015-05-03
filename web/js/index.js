@@ -62,7 +62,7 @@ $(document).ready(function() {
         selector: 'ul li',
         controlNav: false,
         directionNav: true,
-        itemWidth: 311,
+        itemWidth: 450,
         prevText: '<i class="fa fa-chevron-left"></i>',
         nextText: '<i class="fa fa-chevron-right"></i>'
     });
