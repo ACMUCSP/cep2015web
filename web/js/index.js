@@ -62,6 +62,8 @@ $(document).ready(function() {
         selector: 'ul li',
         controlNav: false,
         directionNav: true,
+        slideshowSpeed: 4000,
+        animationSpeed: 800,
         itemWidth: 450,
         prevText: '<i class="fa fa-chevron-left"></i>',
         nextText: '<i class="fa fa-chevron-right"></i>'
