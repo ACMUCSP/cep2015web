@@ -325,22 +325,21 @@
             <h2>Registro</h2>
             <p class="subtitle">¿Estás listo para demostrar tus habilidades?</p>
 
-            <p class="desc">Las inscripciones <strong>se abrirán el 3 de agosto</strong>.
-                <a href="#social" class="scrollable">¡Mantente conectado!</a></p>
+            <p class="desc">Las inscripciones estarán abiertas hasta el 25 de septiembre o hasta cubrir
+            todas las vacantes. Puedes ver el reglamento <a href="files/reglamento.pdf">aquí</a><p>
 
             <h3>Completa tu información</h3>
 
             <div class="form">
 
                 <form action="{{ url('registration') }}" method="post">
-                    {# inputs are temporarily disabled #}
                     {{ form_widget(form1.name) }}
                     {{ form_widget(form1.email) }}
                     {{ form_widget(form1.dni) }}
                     {{ form_widget(form1.school_name) }}
                     {{ form_widget(form1._token) }}
 
-                    <button name="submit" type="submit" disabled="true">Enviar</button>
+                    <button name="submit" type="submit">Enviar</button>
 
                 </form>
 

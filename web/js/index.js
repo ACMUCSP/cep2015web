@@ -93,13 +93,7 @@ $(document).ready(function() {
         if (visible) { $(this).addClass('animated fadeInRight'); }
     });
 
-    // Disabling form
-    $('.registration .form form input, .registration .form form button').attr('disabled', 'true');
-    $('.registration .form form button').css('cursor', 'default');
-    $('.registration .form').css('opacity', 0.8).css('filter', 'blur(1px)').css('-webkit-filter', 'blur(1px)');
-
     // Map
-
     var coord = [-16.39, -71.53557];
     var map = L.map('map_canvas').setView(coord, 15);
 
