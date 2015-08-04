@@ -41,8 +41,7 @@
         </div>
 
         <div class="register-now">
-            <p>Inicio de inscripciones: 3 de Agosto</p>
-            {#<a href="#registration" class="button">Register Now</a>#}
+            <a href="#registration" class="button">Inscríbete</a>
         </div>
 
     </div>
@@ -326,11 +325,11 @@
             <p class="subtitle">¿Estás listo para demostrar tus habilidades?</p>
 
             <p class="desc">Las inscripciones estarán abiertas hasta el 25 de septiembre o hasta cubrir
-            todas las vacantes. Puedes ver el reglamento <a href="files/reglamento.pdf">aquí</a><p>
+            todas las vacantes. Puedes ver el reglamento <a href="files/reglamento.pdf" target="_blank">aquí</a><p>.
 
             <h3>Completa tu información</h3>
 
-            <div class="form">
+            <div class="form registration-form">
 
                 <form action="{{ url('registration') }}" method="post">
                     {{ form_widget(form1.name) }}
@@ -338,10 +337,11 @@
                     {{ form_widget(form1.dni) }}
                     {{ form_widget(form1.school_name) }}
                     {{ form_widget(form1._token) }}
-
                     <button name="submit" type="submit">Enviar</button>
-
                 </form>
+
+                <p class="error"></p>
+                <p class="message"></p>
 
             </div>
 

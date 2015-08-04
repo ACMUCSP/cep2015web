@@ -28,13 +28,10 @@ $app->post('/registration', function (Request $request) use ($app) {
         $entity_manager->persist($msg);
         $entity_manager->flush();
 
-        $app['session']->getFlashBag()->add('message', 'Estimado(a) '.$data['name'].
-            ', confirmaremos tu inscripción en los próximos días #CEP2014.');
+        return new Response('Mensaje recibido correctamente', 200);
     } else {
-        $app['session']->getFlashBag()->add('message',
-            'Uno o más campos no fueron llenados correctamente. Inténtelo nuevamente');
+        return new Response('Uno o más campos no fueron llenados correctamente', 400);
     }
-    return $app->redirect($app['url_generator']->generate('homepage').'#msg');
 })->bind('registration');
 
 

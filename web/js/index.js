@@ -102,4 +102,49 @@ $(document).ready(function() {
       ).addTo(map);
 
   L.marker(coord).addTo(map);
+
+  // Registration Form
+  var request;
+
+  $('.registration-form form').submit(function(event) {
+
+    if (request) {
+      request.abort();
+    }
+
+    var $form = $(this);
+    var $inputs = $form.find('input, button, textarea');
+    var serializedData = $form.serialize();
+
+    $inputs.prop('disabled', true);
+
+    request = $.ajax({
+      url: $(this).attr('action'),
+      type: 'post',
+      data: serializedData
+    });
+
+    request.done(function (response, textStatus, jqXHR){
+      $('.registration-form p.error').hide();
+      $('.registration-form p.message')
+          .html('¡Inscripción recibida! Estaremos en contacto pronto.')
+          .show()
+          .fadeOut(5000);
+    });
+
+    request.fail(function (jqXHR, textStatus, errorThrown){
+      console.error(
+        'The following error occured: '+
+        textStatus, errorThrown
+      );
+      $('.registration-form p.error').html('Uno o más campos no fueron llenados correctamente.');
+    });
+
+    request.always(function () {
+      $inputs.prop('disabled', false);
+    });
+
+    event.preventDefault();
+
+  });
 });
