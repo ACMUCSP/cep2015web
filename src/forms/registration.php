@@ -12,7 +12,7 @@ $form = $app['form.factory']->createBuilder('form')
         'constraints' => array(new Assert\Length(array('min' => 8, 'max' => 8)))
     ))
     ->add('school_name', 'text', array(
-        'attr' => array('placeholder' => 'Nombre del Colegio'),
+        'attr' => array('placeholder' => 'Nombre de tu colegio'),
         'constraints' => array(new Assert\Length(array('max' => 50)))
     ))
     ->add('email', 'email', array(

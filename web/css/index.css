@@ -61,7 +61,11 @@
         text-align: left; } }
 .register-now a.button {
     display: inline-block;
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    color: #10a1d6;
+    background-color: white;
+    text-shadow: none;
+}
 @media all and (max-width: 480px) {
     .register-now a.button {
         text-align: center;
