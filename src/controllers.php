@@ -28,7 +28,7 @@ $app->post('/registration', function (Request $request) use ($app) {
         $entity_manager->persist($msg);
         $entity_manager->flush();
 
-        return new Response('Mensaje recibido correctamente', 200);
+        return new Response('Gracias. Te invitamos a practicar en nuestra sección «Aprende»', 200);
     } else {
         return new Response('Uno o más campos no fueron llenados correctamente', 400);
     }
