@@ -40,9 +40,11 @@
 
         </div>
 
+        {#
         <div class="register-now">
             <a href="#registration" class="button">Inscríbete</a>
         </div>
+        #}
 
     </div>
 {% endblock %}
@@ -325,8 +327,8 @@
             <h2>Registro</h2>
             <p class="subtitle">¿Estás listo para demostrar tus habilidades?</p>
 
-            <p class="desc">Las inscripciones estarán abiertas hasta el 25 de septiembre o hasta cubrir
-            todas las vacantes. Puedes ver el reglamento <a href="files/reglamento.pdf" target="_blank">aquí</a>.<p>
+            <p class="desc">El periodo de inscripción ha terminado.
+            Puedes ver el reglamento del CEP <a href="files/reglamento.pdf" target="_blank">aquí</a>.</p>
 
             <h3>Completa tu información</h3>
 
@@ -338,7 +340,7 @@
                     {{ form_widget(form1.dni) }}
                     {{ form_widget(form1.school_name) }}
                     {{ form_widget(form1._token) }}
-                    <button name="submit" type="submit">Enviar</button>
+                    <button name="submit" type="submit" disabled="true">Enviar</button>
                 </form>
 
                 <p class="error"></p>
